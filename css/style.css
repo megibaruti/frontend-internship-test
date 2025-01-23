@@ -9,7 +9,7 @@ body {
 }
 
 .hero {
-    height: 1080px;
+    height: 100vh;
     width: 100%;
     background-image: url("../assets/Hero.png");
     background-size: cover;
@@ -37,11 +37,45 @@ body {
     border-radius: 5px;
 }
 
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        justify-content: center; 
+        text-align: center;
+    }
+
+    .hero-text {
+        padding: 0 20px;
+        font-size: 2rem; 
+        text-align: center; 
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 8px 16px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        height: 60vh; 
+    }
+
+    .hero-text {
+        font-size: 1.8rem; 
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 6px 12px; 
+    }
+}
+
 .image-gallery {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 50px;
     gap: 20px;
 }
@@ -53,8 +87,9 @@ body {
 }
 
 .image-item img {
-    max-width: 100%;
-    height: auto;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    object-fit: cover;
 }
 
 @media (max-width: 800px) {
@@ -63,6 +98,7 @@ body {
     }
 }
 
+/* === CSS Grid Image Section (Phase 1) === 
 .bottom-section h1 {
     text-transform: uppercase;
     font-size: 35px;
@@ -89,4 +125,79 @@ body {
     font-size: 24px;
     font-weight: 300;
     text-transform: uppercase;
+} */
+
+.bottom-section {
+    text-align: center;
+    padding: 30px;
+}
+
+.bottom-section h1 {
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .bottom-section h1 {
+        font-size: 24px;
+    }
+}
+
+.glide {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.glide__slide {
+    text-align: center;
+}
+
+.glide__slide img {
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(225, 225, 225, 0.2);
+}
+
+.glide__slide p {
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.glide__arrow {
+    color: #333;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.glide__arrow:hover {
+    background-color: #555;
+}
+
+.glide__bullets {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.glide__bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.glide__bullet:hover,
+.glide__bullet:focus {
+    background-color: #333;
 }

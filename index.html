@@ -7,6 +7,10 @@
   <meta name="description" content="Lightweight and optimized front-end website">
   <title>Shero Front-End Test</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script src="js/script.js"></script>
+
 </head>
 
 <body>
@@ -37,10 +41,10 @@
       </div>
     </section>
 
+    <!-- === Grid Image Section (Phase 1) === 
     <section class="bottom-section">
       <h1>Featured Products</h1>
       <div class="grid-container">
-        <!-- Grid Image Section -->
         <div class="grid-item">
           <img src="assets/Image 1.png" alt="Image 1">
           <p>Embroidery Stabilizer</p>
@@ -58,7 +62,38 @@
           <p>Kimberbell Cup two Scoops</p>
         </div>
       </div>
+    </section> -->
+
+    <section class="bottom-section">
+      <h1>Featured Products</h1>
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img src="assets/Image 1.png" alt="Image 1">
+              <p class="slide-description">Embroidery Stabilizer</p>
+            </li>
+            <li class="glide__slide">
+              <img src="assets/Image 2.png" alt="Image 2">
+              <p class="slide-description">Cubbie Grey Elephant</p>
+            </li>
+            <li class="glide__slide">
+              <img src="assets/Image 3.png" alt="Image 3">
+              <p class="slide-description">Kimberbell Cup of Cheer</p>
+            </li>
+            <li class="glide__slide">
+              <img src="assets/Image 4.png" alt="Image 4">
+              <p class="slide-description">Kimberbell Cup Two Scoops</p>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+        </div>
+      </div>
     </section>
+
   </main>
 </body>
 
