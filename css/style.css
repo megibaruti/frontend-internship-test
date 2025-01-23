@@ -92,7 +92,7 @@ body {
     object-fit: cover;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 750px) {
     .image-gallery {
         flex-direction: column;
     }
